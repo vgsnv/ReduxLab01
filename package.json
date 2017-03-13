@@ -1,0 +1,27 @@
+{
+  "name": "redux-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgsnv/ReduxLab01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vgsnv/ReduxLab01/issues"
+  },
+  "homepage": "https://github.com/vgsnv/ReduxLab01#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.2",
+    "style-loader": "^0.13.2",
+    "stylus-loader": "^3.0.1",
+    "typescript": "^2.2.1",
+    "typings-for-css-modules-loader": "^1.5.0",
+    "webpack": "^2.2.1"
+  }
+}
