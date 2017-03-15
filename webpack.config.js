@@ -7,18 +7,18 @@ module.exports = {
     path: path.resolve(__dirname, "dist"), 
     filename: "bundle.js"
   },
+  plugins: [new HtmlWebpackPlugin({
+    title: "ReduxLab01"
+  })],
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         exclude: /node_modules/,
         loader: "awesome-typescript-loader"
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({template: './index.html'})
-  ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,

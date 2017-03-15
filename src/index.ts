@@ -8,4 +8,4 @@ let a: Article = {
   num: 123
 };
 
-console.log(a);
+console.log("Привет!");
