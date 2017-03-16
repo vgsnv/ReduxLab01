@@ -7,9 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"), 
     filename: "bundle.js"
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: "ReduxLab01"
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({template: './src/index.html'})
+  ],
   module: {
     rules: [
       {
@@ -20,8 +20,8 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
+    contentBase: path.join(__dirname, "dist/"),
+    compress: false,
     port: 9000
   }
 }

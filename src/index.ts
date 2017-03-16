@@ -1,11 +1,17 @@
-interface Article {
-  type: string,
-  num: number
-}
+// const ADD_TODO = 'ADD_TODO';
 
-let a: Article = {
-  type: 'Hello',
-  num: 123
+enum Actions {ADD_TODO, DEL_TODO};
+
+interface IAddTodo {
+  type: Actions;
+  text: string;
 };
 
-console.log("Привет!");
+interface IDelTodo {
+  type: Actions;
+  id: number;
+};
+
+const addTodo = (text: string): IAddTodo => ({ type: Actions.ADD_TODO, text });
+
+const delTodo = (id: number): IDelTodo => ({ type: Actions.DEL_TODO, id });
