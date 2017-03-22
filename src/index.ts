@@ -59,5 +59,8 @@ let unsubscribe = store.subscribe(() =>
 )
 
 store.dispatch(addArticle({id: 2, title: 'Сосиски', value: 500}));
+store.dispatch(addArticle({id: 3, title: 'Майонез', value: 350}));
+store.dispatch(addArticle({id: 4, title: 'Вилки', value: 100}));
+store.dispatch(addArticle({id: 5, title: 'Вилки', value: 100}));
 console.log(initialState)
 
