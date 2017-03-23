@@ -47,6 +47,9 @@ function articles(state: List<IArticle> = initialState.articles, action: IAction
   switch(action.type){
     case ArticleActions.ADD_TODO:
       return state.push(action.article)
+    case ArticleActions.DEL_TODO:
+      const index: number = state.findIndex(article => article.id === action.id);
+      return state.delete(state.findIndex(article => article.id === action.id));
     default:
       return state
   }
@@ -62,5 +65,6 @@ store.dispatch(addArticle({id: 2, title: 'Сосиски', value: 500}));
 store.dispatch(addArticle({id: 3, title: 'Майонез', value: 350}));
 store.dispatch(addArticle({id: 4, title: 'Вилки', value: 100}));
 store.dispatch(addArticle({id: 5, title: 'Вилки', value: 100}));
+store.dispatch(delArticle(3));
 console.log(initialState)
 
