@@ -16,6 +16,15 @@ module.exports = {
       }
     ]
   },
+  resolve:{
+    alias: {
+      actions: path.resolve(__dirname, 'src/actions/'),
+      models: path.resolve(__dirname, 'src/models/'),
+      components: path.resolve(__dirname, 'src/components/'),
+      reducers: path.resolve(__dirname, 'src/reducers/')
+    },
+    extensions: [".tsx", ".ts", ".js"]
+  },
   devServer: {
     contentBase: path.join(__dirname, "dist/"),
     compress: false,
